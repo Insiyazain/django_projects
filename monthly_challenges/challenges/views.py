@@ -11,7 +11,8 @@ monthly_challenges={
     "march":"Learn django for atleast 20 minutes every day",
     "april":"Eat no meat for the entire month",
     "may":"walk for atleast 20 minutes every day",
-    "june":"Learn django for atleast 20 minutes every day"
+    "june":"Learn django for atleast 20 minutes every day",
+    "july": None
 }
 
 def list_of_challenges(request):
@@ -22,7 +23,7 @@ def list_of_challenges(request):
         "months":months
     })
 
-    return HttpResponse(response_form)
+    
 
 def monthly_challenges_by_number(request, month):
     months=list(monthly_challenges.keys())
