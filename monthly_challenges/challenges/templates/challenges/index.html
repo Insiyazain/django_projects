@@ -5,9 +5,10 @@ All Challenges
 {%endblock%}
   
 {%block content%}
-<ul>
-  {%for month in months%}
-   <li><a href="{%url "monthly-challenge" month%}">{{month|title}}</a></li>
-  {% endfor%}
-</ul>
+  {% include "Challenges/includes/header.html" %}
+  <ul>
+    {%for month in months%}
+     <li><a href="{%url "monthly-challenge" month%}">{{month|title}}</a></li>
+    {% endfor%}
+  </ul>
 {%endblock%}
